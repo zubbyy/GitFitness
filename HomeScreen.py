@@ -3,7 +3,7 @@ import dominate
 from dominate.tags import *
 
 
-import json
+import json, sys
 # website title
 Website_title = "GitFitness"
 
@@ -32,14 +32,23 @@ def HomeScreen():
             
             with div(id="header").add(ul()):
                 for file in files:
-                    li(a(file.replace("-", " ").title(), href=file))
+                    li(a(file.replace("-", " ").title(), href="ricette-html/"+file))
 
 
             h1("Progetto:")
             p("Sito web open source a cui si può contribuire utilizzando github")
             
             ul(li("Per inviare nuove ricette o consultare il progetto:",a("github", href="github.com"), __pretty=False))
-    print(doc)
+
+
+    # writing one the html file, idk wtf is sys.stdout but idc:3
+    # basically somehow it gets the html onto homepage.html
+    
+    original = sys.stdout
+    with open("../homepage.html", "w") as f:
+        sys.stdout = f
+        print(doc)
+        sys.stdout = original
 
 
 if __name__ == "__main__":
