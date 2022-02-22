@@ -1,0 +1,22 @@
+body {
+    background-color: rgb(33, 33, 33);
+    max-width: 1000px;
+    margin: auto;
+}
+
+h1,
+h2 {
+    text-align: center;
+}
+
+:root {
+    color: rgb(212, 206, 206);
+    font-size: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+@media(min-width: 55em) {
+     :root {
+        font-size: 25px;
+    }
+}
