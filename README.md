@@ -1,4 +1,5 @@
 # GitFitness
+an old project I might pick up again, inspired by [based cooking]{https://github.com/LukeSmithxyz/based.cooking} but with fitness related recipes
 
 # _Dependencies of the website:_
 
